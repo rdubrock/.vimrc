@@ -33,13 +33,15 @@
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   autocmd InsertEnter,InsertLeave * set cul!
-  imap <C-Space> <C-X><C-O>
   set rtp+=~/.vim/bundle/Vundle.vim
+  colorscheme onedark
   call vundle#begin()
   Plugin 'sheerun/vim-polyglot'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'Raimondi/delimitMate'
   Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'joshdick/airline-onedark.vim'
   call vundle#end()
   let g:jsx_ext_required=0
   let g:javascript_enable_domhtmlcss=1
@@ -47,5 +49,5 @@
   let g:onedark_terminal_italics=1
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_alt_sep = '|'
-  colorscheme onedark
+  let g:airline_theme='onedark'
   syntax on
