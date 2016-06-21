@@ -1,3 +1,7 @@
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  set ttimeoutlen=50
   highlight PmenuSel guifg=#ffffff guibg=#0000ff
   set gfn=Monaco:h13
   "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -29,10 +33,8 @@
   set softtabstop=2
   set expandtab
   set autoread
+  set laststatus=2
   set omnifunc=htmlcomplete#CompleteTags
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  autocmd InsertEnter,InsertLeave * set cul!
   set rtp+=~/.vim/bundle/Vundle.vim
   colorscheme onedark
   call vundle#begin()
@@ -42,7 +44,11 @@
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'joshdick/airline-onedark.vim'
+  Plugin 'Quramy/tsuquyomi'
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'jason0x43/vim-js-indent'
   call vundle#end()
+  let g:typescript_indent_disable = 1
   let g:jsx_ext_required=0
   let g:javascript_enable_domhtmlcss=1
   let g:ycm_allow_changing_updatetime=1
