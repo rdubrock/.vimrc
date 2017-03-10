@@ -38,6 +38,7 @@
   set rtp+=~/.vim/bundle/Vundle.vim
   colorscheme onedark
   call vundle#begin()
+  Plugin 'Chiel92/vim-autoformat'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'Raimondi/delimitMate'
@@ -46,7 +47,8 @@
   Plugin 'joshdick/airline-onedark.vim'
   Plugin 'Quramy/tsuquyomi'
   Plugin 'leafgarland/typescript-vim'
-  Plugin 'jason0x43/vim-js-indent'
+  Plugin 'Chiel92/vim-autoformat'
+  Plugin 'alvan/vim-closetag'
   call vundle#end()
   let g:typescript_indent_disable = 1
   let g:jsx_ext_required=0
