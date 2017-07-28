@@ -34,22 +34,27 @@
   set expandtab
   set autoread
   set laststatus=2
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
   set omnifunc=htmlcomplete#CompleteTags
   set rtp+=~/.vim/bundle/Vundle.vim
-  colorscheme onedark
   call vundle#begin()
-  Plugin 'Chiel92/vim-autoformat'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'Raimondi/delimitMate'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'joshdick/airline-onedark.vim'
+  Plugin 'rakr/vim-one'
+  Plugin 'joshdick/onedark.vim'
   Plugin 'Quramy/tsuquyomi'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'Chiel92/vim-autoformat'
   Plugin 'alvan/vim-closetag'
+  Plugin 'vim-syntastic/syntastic'
   call vundle#end()
+  colorscheme one
+  set background=dark
   let g:typescript_indent_disable = 1
   let g:jsx_ext_required=0
   let g:javascript_enable_domhtmlcss=1
@@ -57,5 +62,15 @@
   let g:onedark_terminal_italics=1
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_theme='onedark'
+  let g:airline_theme='one'
+  let g:syntastic_javascript_checkers=['eslint']
+  let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+  let g:syntastic_always_populate_loc_list = 0
+  let g:syntastic_auto_loc_list = 0
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+  let g:syntastic_enable_highlighting = 1
+  let g:syntastic_enable_signs = 1
+  highlight SyntasticErrorLine guibg=#550000
+  highlight SyntasticWarningLine guibg=#331d1e
   syntax on
