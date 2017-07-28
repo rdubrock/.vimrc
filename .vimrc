@@ -51,7 +51,7 @@
   Plugin 'leafgarland/typescript-vim'
   Plugin 'Chiel92/vim-autoformat'
   Plugin 'alvan/vim-closetag'
-  Plugin 'vim-syntastic/syntastic'
+  Plugin 'w0rp/ale'
   call vundle#end()
   colorscheme one
   set background=dark
@@ -65,15 +65,9 @@
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_alt_sep = '|'
   let g:airline_theme='one'
-  let g:syntastic_javascript_checkers=['eslint']
-  let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-  let g:syntastic_always_populate_loc_list = 0
-  let g:syntastic_auto_loc_list = 0
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 0
-  let g:syntastic_error_symbol = '✗'
-  let g:syntastic_warning_symbol = '!'
-  let g:syntastic_stl_format = "[Syntax: line:%F (%t)]"
+  let g:ale_sign_error = '✗'
+  let g:ale_sign_warning = '!'
+  let g:airline#extensions#ale#enabled = 1
   highlight SyntasticErrorLine guibg=#550000
   highlight SyntasticWarningLine guibg=#331d1e
   syntax on
