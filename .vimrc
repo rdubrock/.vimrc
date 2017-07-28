@@ -55,6 +55,7 @@
   call vundle#end()
   colorscheme one
   set background=dark
+  let g:closetag_filenames = '*.html,*.js,*.jsx'
   let g:one_allow_italics = 1
   let g:typescript_indent_disable = 1
   let g:jsx_ext_required=0
