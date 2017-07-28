@@ -55,6 +55,7 @@
   call vundle#end()
   colorscheme one
   set background=dark
+  let g:one_allow_italics = 1
   let g:typescript_indent_disable = 1
   let g:jsx_ext_required=0
   let g:javascript_enable_domhtmlcss=1
@@ -69,8 +70,9 @@
   let g:syntastic_auto_loc_list = 0
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
-  let g:syntastic_enable_highlighting = 1
-  let g:syntastic_enable_signs = 1
+  let g:syntastic_error_symbol = '✗'
+  let g:syntastic_warning_symbol = '!'
+  let g:syntastic_stl_format = "[Syntax: line:%F (%t)]"
   highlight SyntasticErrorLine guibg=#550000
   highlight SyntasticWarningLine guibg=#331d1e
   syntax on
