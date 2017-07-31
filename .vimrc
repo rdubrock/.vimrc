@@ -65,8 +65,8 @@
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_alt_sep = '|'
   let g:airline_theme='one'
-  let g:ale_sign_error = '✗'
-  let g:ale_sign_warning = '!'
+  let g:ale_sign_error = "✘"
+  let g:ale_sign_warning = "🔸"
   let g:airline#extensions#ale#enabled = 1
   highlight SyntasticErrorLine guibg=#550000
   highlight SyntasticWarningLine guibg=#331d1e
